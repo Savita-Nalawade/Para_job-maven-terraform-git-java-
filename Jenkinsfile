@@ -3,7 +3,7 @@ pipeline {
     parameters {
         string(name: 'maven_version', defaultValue: '3.9.3', description: 'Pass the version of Maven')
         string(name: 'terraform_version', defaultValue: '1.8.5', description: 'Pass the version of Terraform')	
-		string(name: 'git_version', defaultValue: '2.46.1', description: 'Pass the version of Git')
+	string(name: 'git_version', defaultValue: '2.46.1', description: 'Pass the version of Git')
         string(name: 'java_version', defaultValue: '18', description: 'Pass the version of Java')
     }
     stages {
@@ -23,7 +23,6 @@ pipeline {
                 '''
             }
         }	
-        stages {
         stage('Download Git') {
             steps {
                 sh '''
