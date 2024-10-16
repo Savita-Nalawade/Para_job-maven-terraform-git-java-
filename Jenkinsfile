@@ -38,6 +38,7 @@ pipeline {
                 cd /opt
                 sudo wget https://download.java.net/java/GA/jdk${java_version}/binaries/openjdk-${java_version}_linux-x64_bin.tar.gz
 		sudo tar -xzf openjdk-17_linux-x64_bin.tar.gz
+                sudo rm openjdk-${java_version}_linux-x64_bin.tar.gz
                 '''
             }
         }	
