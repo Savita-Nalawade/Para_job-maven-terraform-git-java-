@@ -29,12 +29,6 @@ pipeline {
                 cd /var/lib/jenkins/
                 sudo wget https://github.com/git/git/archive/refs/tags/v${git_version}.tar.gz
                 sudo tar -xzf v${git_version}.tar.gz
-                cd git-${git_version}
-                sudo make prefix=/usr/local all
-                sudo make prefix=/usr/local install
-                cd ..
-                sudo rm -rf git-${git_version} v${git_version}.tar.gz
-                '''
             }
         }
         stage('Download Java') {
