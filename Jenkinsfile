@@ -29,6 +29,7 @@ pipeline {
                 cd /var/lib/jenkins/
                 sudo wget https://github.com/git/git/archive/refs/tags/v${git_version}.tar.gz
                 sudo tar -xzf v${git_version}.tar.gz
+		'''
             }
         }
         stage('Download Java') {
