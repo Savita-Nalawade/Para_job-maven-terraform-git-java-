@@ -5,7 +5,7 @@ pipeline {
         string(name: 'terraform_version', defaultValue: '1.8.5', description: 'Pass the version of Terraform')    
         string(name: 'git_version', defaultValue: '2.46.1', description: 'Pass the version of Git')
         string(name: 'java_version', defaultValue: '17', description: 'Pass the major version of Java (e.g., 17)')
-        string(name: 'java_patch_version', defaultValue: '0.12', description: 'Pass the patch version of Java (e.g., 0.12)')
+        
     }
     stages {
         stage('Download Maven') {
@@ -43,7 +43,6 @@ pipeline {
                 sh '''
                 cd /opt
                 sudo wget https://download.oracle.com/java/${java_version}/archive/jdk-${java_version}.${java_patch_version}_linux-x64_bin.tar.gz
-                sudo tar -xzf jdk-${java_version}.${java_patch_version}_linux-x64_bin.tar.gz
                 sudo rm jdk-${java_version}.${java_patch_version}_linux-x64_bin.tar.gz
                 '''
             }
